@@ -3,7 +3,7 @@
 //
 
 
-//TODO: Add Lil'D, but also the Laktu Cameraman following behind him.
+
 
 trainer_d = new Trainer({
 	//skipme: true,
@@ -34,7 +34,6 @@ trainer_d = new Trainer({
 	ribbons: [
 		new Record_Ribbon("Shortest time to first badge: 0d 3h 54m"),
 		new Record_Ribbon("Shortest time to hall of fame: 5d 5h 9m"),
-
 	],
 	
 	icons : [
@@ -57,16 +56,7 @@ trainer_d = new Trainer({
 		new Badge({ name: "Iceburg Badge", leader: "Wulfric", type: "Ice" }),
 	],
 	
-	behavior: function(){
-		if (this.recentX != this.x || this.recentY != this.y) {
-			this.prevX = this.recentX;
-			this.prevY = this.recentY;
-		}
-		this.recentX = this.x;
-		this.recentY = this.y; 
-		
-		behavior.meander.call(this);
-	},
+	behavior: behavior.meander,
 	behavArg : {
 		"left" : -18, "top" : 18,
 		"right": -13, "bottom": 22,
@@ -76,9 +66,6 @@ trainer_d = new Trainer({
 		right: -13, bottom: 22,
 	},
 	
-	// to support Lakitu
-	prevX: -14, prevY: 20,
-	recentX: -15, recentY: 20,
 });
 addEvent(trainer_d);
 
@@ -86,10 +73,27 @@ addEvent(new Person({
 	//skipme: true,
 	name : "Lakitu",
 	spritesheet : "img/trainers/joey.png",
-	x: -14, y: 20, // set immediately by behavior
+	x: -13, y: 20,
 	
 	activeZone: trainer_d.activeZone,
 	
+	
+	
+	// record of d's movements
+	dPrevX: -14, dPrevY: 20,
+	dRecentX: -15, dRecentY: 20,
+	
+	updateDPrevXY : function() {
+		var dCurrX = (trainer_d._d_x === undefined ? trainer_d.x : trainer_d._d_x);
+		var dCurrY = (trainer_d._d_y === undefined ? trainer_d.y : trainer_d._d_y); 
+		
+		if (this.dRecentX != dCurrX || this.dRecentY != dCurrY) {
+			this.dPrevX = this.dRecentX;
+			this.dPrevY = this.dRecentY;
+		}
+		this.dRecentX = dCurrX;
+		this.dRecentY = dCurrY; 
+	},
 	
 	
 	behavior : function(){
@@ -104,12 +108,12 @@ addEvent(new Person({
 		else { dir = 2; }
 		this.direction = dir;
 		
-		
+		this.updateDPrevXY.call(this);
 		// move to the location where d was previously
-		if (this.x != trainer_d.prevX || this.y != trainer_d.prevY) {
+		if (this.x != this.dPrevX || this.y != this.dPrevY) {
 			var evtobj = this;
-			var _x = trainer_d.prevX;
-			var _y = trainer_d.prevY;
+			var _x = this.dPrevX;
+			var _y = this.dPrevY;
 			
 			this._d_x = _x;
 			this._d_y = _y;
