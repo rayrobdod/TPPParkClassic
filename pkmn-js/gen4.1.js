@@ -2,7 +2,6 @@
 // File for TPP HeartGold events
 //
 
-//showGameClock("TPP HeartGold Game Clock<br/>", new Date(Date.UTC(2014, 05-1, 24, 0+4)));
 
 addEvent(new Pokemon({
 	name: "Vibrava",

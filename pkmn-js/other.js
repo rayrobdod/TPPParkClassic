@@ -2,6 +2,17 @@
 // File for various other events relating to TPP
 // 
 
+(function(){
+	var date = new Date(Date.UTC(2015, 2-1, 12, 21));
+	if (date.getTime() > new Date().getTime()) {
+		showTimer("TPP Anniversary Red starts in<br/>", date);
+	} else {
+		showGameClock("TPP Anniversary Red Game Clock<br/>", date);
+	}
+})();
+
+
+
 //////////////////// Starter Campfire ///////////////////////
 
 addEvent(new Building({
