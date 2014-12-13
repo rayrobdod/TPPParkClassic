@@ -89,6 +89,9 @@ addEvent(new Pokemon({
 	ribbons : [
 		new HallOfFame_Ribbon("15d 2h 2m"),
 	],
+}).forOccasion("100club", {
+	x: -23, y: -3,
+	adj_flip:true,
 }));
 
 // Hyperbug
@@ -116,6 +119,10 @@ addEvent(new Pokemon({
 	ribbons : [
 		new HallOfFame_Ribbon("15d 2h 2m"),
 	],
+}).forOccasion("100club", {
+	shadow: "",
+	x: -5, y: -36,
+	adj_x: -8,
 }));
 
 // Mew

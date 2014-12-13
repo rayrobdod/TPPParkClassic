@@ -418,6 +418,8 @@ addEvent(new Pokemon({
 	ribbons : [
 		new Daycare_Ribbon("Forevermore"),
 	],
+}).forOccasion("100club", {
+	x: -32, y: -26,
 }));
 // There's also the zubat left with Oxxy, but no one seems to care about it...
 

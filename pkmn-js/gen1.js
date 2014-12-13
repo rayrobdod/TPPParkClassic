@@ -232,6 +232,9 @@ addEvent(new Pokemon({
 		new Released_Ribbon("4d 8h 50m"),
 		new Record_Ribbon("First Pokemon TPP Released"),
 	],
+}).forOccasion("100club", {
+	x: -21, y: -4,
+	adj_x: -4,
 }));
 
 // Original Cabbage
@@ -260,6 +263,8 @@ addEvent(new Pokemon({
 	x: -21, y: -1,
 	animation: "breathe",
 	adj_flip: true,
+}).forOccasion("100club", {
+	x: -29, y: -24,
 }));
 
 
@@ -337,6 +342,11 @@ addEvent(new Pokemon({
 	ribbons : [
 		new Daycare_Ribbon("Forevermore"),
 	],
+}).forOccasion("100club", {
+	sprite: "img/pkmn/gastly.png", //Bulbapedia
+	shadow: "img/pkmn/generic-shadow.png",
+	x: -19, y: -3,
+	animation: "breathe",
 }));
 
 // C3KO

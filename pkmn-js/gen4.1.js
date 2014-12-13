@@ -30,6 +30,10 @@ addEvent(new Pokemon({
 		new HallOfFame_Ribbon("11d 9h 9m"),
 		new HallOfFame_Ribbon("16d 12h 56m (Rematch)"),
 	],
+}).forOccasion("100club", {
+	x: -21, y: -5,
+	adj_x: -4,
+	adj_flip:true,
 }));
 
 addEvent(new MultiEvent({
@@ -143,6 +147,9 @@ addEvent(new Pokemon({
 		new HallOfFame_Ribbon("16d 12h 56m (Rematch)"),
 		new Record_Ribbon("Third Lvl 100 Pokemon"),
 	],
+}).forOccasion("100club", {
+	x: 11, y: -26,
+	adj_flip: true,
 }));
 
 addEvent(new MultiEvent({

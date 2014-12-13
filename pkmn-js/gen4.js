@@ -28,6 +28,9 @@ addEvent(new Pokemon({
 		new Released_Ribbon("0d 5h 34m"),
 		new Record_Ribbon("Fastest Release"),
 	],
+}).forOccasion("100club", {
+	x: 33, y: -25,
+	adj_flip: true,
 }));
 
 //
@@ -473,6 +476,8 @@ addEvent(new Pokemon({
 		new Daycare_Ribbon("Common Resident"),
 		new Pokerus_Ribbon(),
 	],
+}).forOccasion("100club", {
+	x: 34, y: -26,
 }));
 
 

@@ -115,6 +115,8 @@ addEvent(new Pokemon({
 		new Starter_Ribbon(),
 		new HallOfFame_Ribbon("16d 5h 34m"),
 	],
+}).forOccasion("100club", {
+	x: 14, y: -28,
 }));
 
 addEvent(new Pokemon({
@@ -142,6 +144,8 @@ addEvent(new Pokemon({
 	ribbons : [
 		new HallOfFame_Ribbon("16d 5h 34m"),
 	],
+}).forOccasion("100club", {
+	x: 15, y: -24,
 }));
 
 addEvent(new Pokemon({
@@ -168,6 +172,8 @@ addEvent(new Pokemon({
 	ribbons : [
 		new HallOfFame_Ribbon("16d 5h 34m"),
 	],
+}).forOccasion("100club", {
+	x: 6, y: -28,
 }));
 
 addEvent(new Pokemon({
@@ -222,6 +228,8 @@ addEvent(new Pokemon({
 	ribbons : [
 		new HallOfFame_Ribbon("16d 5h 34m"),
 	],
+}).forOccasion("100club", {
+	x: 17, y: -30,
 }));
 
 addEvent(new Pokemon({
@@ -250,6 +258,15 @@ addEvent(new Pokemon({
 	ribbons : [
 		new HallOfFame_Ribbon("16d 5h 34m"),
 	],
+}).forOccasion("100club", {
+	sprite: "img/pkmn/zoroark_playing.gif",
+	x: 11, y: -34,
+	animation: false,
+	adj_flip: false,
+	sources : {
+		"Sprite is flair by /u/UDie2day; Animated by /u/Yoshord" : "http://www.reddit.com/r/twitchplayspokemon/comments/2c1d3t/pokémon_x_flair_header_and_sidebar_suggestions/cjaxlm4",
+		"Pokedex Image from Bulbapedia" : "",
+	},
 }));
 
 
