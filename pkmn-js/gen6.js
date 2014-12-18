@@ -72,7 +72,7 @@ addEvent(trainer_d);
 addEvent(new Person({
 	//skipme: true,
 	name : "Lakitu",
-	spritesheet : "img/trainers/joey.png",
+	spritesheet : "img/trainers/lakitu.png",
 	x: -13, y: 20,
 	
 	activeZone: trainer_d.activeZone,
